@@ -76,7 +76,7 @@ const SingleProduct = () => {
               <p className="text-base text-secondaryBrown">
                 {formatCategoryName(singleProduct?.category || "")}
               </p>
-              <p className="text-base font-bold">{  singleProduct?.price * 3 } TL</p>
+              <p className="text-base font-bold">{  singleProduct?.price * 5 } TL</p>
             </div>
           </div>
           <div className="flex flex-col gap-2">

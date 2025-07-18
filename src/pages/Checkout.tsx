@@ -430,7 +430,7 @@ const Checkout = () => {
 
           {/* Order summary */}
           <div className="mt-10 lg:mt-0">
-            <h2 className="text-lg font-medium text-gray-900">Order summary</h2>
+            <h2 className="text-lg font-medium text-gray-900">Sipariş özeti</h2>
 
             <div className="mt-4 border border-gray-200 bg-white shadow-sm">
               <h3 className="sr-only">Items in your cart</h3>
@@ -469,7 +469,7 @@ const Checkout = () => {
                               )
                             }
                           >
-                            <span className="sr-only">Remove</span>
+                            <span className="sr-only">Kaldır</span>
                             <TrashIcon className="h-5 w-5" aria-hidden="true" />
                           </button>
                         </div>
@@ -477,12 +477,12 @@ const Checkout = () => {
 
                       <div className="flex flex-1 items-end justify-between pt-2">
                         <p className="mt-1 text-sm font-medium text-gray-900">
-                           {product?.price * 3} TL
+                           {product?.price * 5} TL
                         </p>
 
                         <div className="ml-4">
                           <p className="text-base">
-                            Quantity: {product?.quantity}
+                            Miktar: {product?.quantity}
                           </p>
                         </div>
                       </div>
@@ -492,25 +492,25 @@ const Checkout = () => {
               </ul>
               <dl className="space-y-6 border-t border-gray-200 px-4 py-6 sm:px-6">
                 <div className="flex items-center justify-between">
-                  <dt className="text-sm">Subtotal</dt>
+                  <dt className="text-sm">Ara toplam</dt>
                   <dd className="text-sm font-medium text-gray-900">
                     ${subtotal}
                   </dd>
                 </div>
                 <div className="flex items-center justify-between">
-                  <dt className="text-sm">Shipping</dt>
+                  <dt className="text-sm">Nakliye</dt>
                   <dd className="text-sm font-medium text-gray-900">
-                    ${subtotal ? 5 : 0}
+                    {subtotal ? 5 : 0} TL
                   </dd>
                 </div>
                 <div className="flex items-center justify-between">
-                  <dt className="text-sm">Taxes</dt>
+                  <dt className="text-sm">Vergiler</dt>
                   <dd className="text-sm font-medium text-gray-900">
                     ${subtotal ? subtotal / 5 : 0}
                   </dd>
                 </div>
                 <div className="flex items-center justify-between border-t border-gray-200 pt-6">
-                  <dt className="text-base font-medium">Total</dt>
+                  <dt className="text-base font-medium">Toplam</dt>
                   <dd className="text-base font-medium text-gray-900">
                     ${subtotal ? subtotal + 5 + subtotal / 5 : 0}
                   </dd>

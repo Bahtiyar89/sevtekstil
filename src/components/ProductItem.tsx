@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { formatCategoryName } from "../utils/formatCategoryName";
-import luxury1 from '../assets/luxurycategory1.png'; 
-import luxury2 from '../assets/luxurycategory2.png'; 
-import luxury3 from '../assets/luxurycategory3.png'; 
-import luxury4 from '../assets/luxurycategory4.png'; 
-import luxury5 from '../assets/luxuryfashion71.png'; 
-import luxury6 from '../assets/luxuryfashion72.png';
+import luxury1 from '../assets/product image 13.jpg'; 
+import luxury2 from '../assets/product image 14.jpg'; 
+import luxury3 from '../assets/product image 15.jpg'; 
+import luxury4 from '../assets/product image 16.jpg'; 
+import luxury5 from '../assets/product image 17.jpg'; 
+import luxury6 from '../assets/product image 18.jpg';
 
 const ProductItem = ({
   id,
@@ -39,7 +39,7 @@ const ProductItem = ({
         {formatCategoryName(category)}{" "}
       </p>
       <p className="text-black text-2xl text-center font-bold max-md:text-xl">
-        {price * 3} TL
+        {price * 5} TL
       </p>
       <div className="w-full flex flex-col gap-1">
         <Link

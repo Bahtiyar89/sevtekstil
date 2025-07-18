@@ -19,12 +19,12 @@ const Cart = () => {
     <div className="bg-white mx-auto max-w-screen-2xl px-5 max-[400px]:px-3">
       <div className="pb-24 pt-16">
         <h1 className="text-3xl tracking-tight text-gray-900 sm:text-4xl">
-          Shopping Cart
+          Alışveriş Sepeti
         </h1>
         <form className="mt-12 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12 xl:gap-x-16">
           <section aria-labelledby="cart-heading" className="lg:col-span-7">
             <h2 id="cart-heading" className="sr-only">
-              Items in your shopping cart
+              Alışveriş sepetinizdeki ürünler
             </h2>
 
             <ul
@@ -63,7 +63,7 @@ const Cart = () => {
                           ) : null}
                         </div>
                         <p className="mt-1 text-sm font-medium text-gray-900">
-                           {product.price * 3} TL
+                           {product.price * 5} TL
                         </p>
                       </div>
 
@@ -133,25 +133,25 @@ const Cart = () => {
               id="summary-heading"
               className="text-lg font-medium text-gray-900"
             >
-              Order summary
+              Sipariş özeti
             </h2>
 
             <dl className="mt-6 space-y-4">
               <div className="flex items-center justify-between">
-                <dt className="text-sm text-gray-600">Subtotal</dt>
+                <dt className="text-sm text-gray-600">Ara toplam</dt>
                 <dd className="text-sm font-medium text-gray-900">
-                  ${subtotal}
+                  {subtotal} TL
                 </dd>
               </div>
               <div className="flex items-center justify-between border-t border-gray-200 pt-4">
                 <dt className="flex items-center text-sm text-gray-600">
-                  <span>Shipping estimate</span>
+                  <span>Nakliye tahmini</span>
                   <a
                     href="#"
                     className="ml-2 flex-shrink-0 text-gray-400 hover:text-gray-500"
                   >
                     <span className="sr-only">
-                      Learn more about how shipping is calculated
+                      Gönderim ücretinin nasıl hesaplandığı hakkında daha fazla bilgi edinin
                     </span>
                     <QuestionMarkCircleIcon
                       className="h-5 w-5 text-secondaryBrown"
@@ -160,18 +160,18 @@ const Cart = () => {
                   </a>
                 </dt>
                 <dd className="text-sm font-medium text-gray-900">
-                  ${subtotal === 0 ? 0 : 5.0}
+                  {subtotal === 0 ? 0 : 5.0} TL
                 </dd>
               </div>
               <div className="flex items-center justify-between border-t border-gray-200 pt-4">
                 <dt className="flex text-sm text-gray-600">
-                  <span>Tax estimate</span>
+                  <span>Vergi tahmini</span>
                   <a
                     href="#"
                     className="ml-2 flex-shrink-0 text-gray-400 hover:text-gray-500"
                   >
                     <span className="sr-only">
-                      Learn more about how tax is calculated
+                    Verginin nasıl hesaplandığı hakkında daha fazla bilgi edinin
                     </span>
                     <QuestionMarkCircleIcon
                       className="h-5 w-5 text-secondaryBrown"
@@ -180,15 +180,15 @@ const Cart = () => {
                   </a>
                 </dt>
                 <dd className="text-sm font-medium text-gray-900">
-                  ${subtotal / 5}
+                  {subtotal / 5} TL
                 </dd>
               </div>
               <div className="flex items-center justify-between border-t border-gray-200 pt-4">
                 <dt className="text-base font-medium text-gray-900">
-                  Order total
+                  Sipariş toplamı
                 </dt>
                 <dd className="text-base font-medium text-gray-900">
-                  ${subtotal === 0 ? 0 : subtotal + subtotal / 5 + 5}
+                  {subtotal === 0 ? 0 : subtotal + subtotal / 5 + 5} TL
                 </dd>
               </div>
             </dl>
@@ -199,7 +199,7 @@ const Cart = () => {
                   to="/checkout"
                   className="text-white bg-secondaryBrown text-center text-xl font-normal tracking-[0.6px] leading-[72px] w-full h-12 flex items-center justify-center max-md:text-base"
                 >
-                  Checkout
+                  Çıkış yapmak
                 </Link>
               </div>
             )}
